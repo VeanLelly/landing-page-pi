@@ -55,7 +55,7 @@ body{
     width: 100%;
 }
 
-.conteudo-main{
+.banner{
     display: flex;
     flex-direction: row;
     align-items: center;
