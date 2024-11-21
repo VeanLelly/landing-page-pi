@@ -1,19 +1,17 @@
-// // CARROSEL
-// let count = 1;
-// document.getElementById("radio1").checked = true;
+let count = 1;
+document.getElementById("radio1").checked = true;
 
-// setInterval( function(){
-//     nextImage();
-// }, 4500) 
+setInterval( function(){
+    nextImage();
+}, 4500) 
 
-// function nextImage(){
-//     count++;
-//     if(count>4){
-//         count = 1;
-//     }
+function nextImage(){
+    count++;
+    if(count>4){
+        count = 1;
+    }
 
-//     document.getElementById("radio"+count).checked = true;
+    document.getElementById("radio"+count).checked = true;
 
 
-// }
-
+}
