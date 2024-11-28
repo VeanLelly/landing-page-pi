@@ -8,7 +8,30 @@
     <title>Blog</title>
 </head>
 <body>
-    <h1 id="title-blog">Blog</h1>
+
+    <header>
+        <div class="container">
+            <div class="navbar-container">
+                <nav class="nav">
+                    <img src="{% static 'base/img/logo.svg' %}" alt="LOGO Have Odonto" class="cabecalho-imagem">
+                    <div class="mobile-menu">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                    </div>
+                    <ul class="navbar-itens">
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="{% url 'post_list' %}">Blog</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#endereco">Contato</a></li>
+                        <li><a href="#" class="default-btn">Login</a></li>
+                    </ul>
+                </nav>
+            </div>
+    </header>
+
+    <main>
+        <h1 id="title-blog">Blog</h1>
 
     <!-- Exibe o link de "Criar Novo Post" apenas para administradores -->
     {% if user.is_superuser %}
@@ -38,6 +61,12 @@
             </li>
         {% endfor %}
     </ul>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Clínica Have Odonto | Todos os direitos reservados</p>
+    </footer>    
 
     <!-- Modal de Confirmação de Exclusão -->
     <div id="myModal" class="modal">
